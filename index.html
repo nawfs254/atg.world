@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/224c54710f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navBar py-3 px-5">
+        <div id="logo"><img src="assets/logo.svg" alt="" class="logo" /></div>
+        <div id="searchBar" class="rounded-2">
+            <i class="fa-solid fa-magnifying-glass searchIcon position-absolute p-3" id="searchIcon"></i>
+            <input type="text" id="searchBox" class="d-flex p-2 rounded-2"
+                placeholder="Search for your favorite groups in ATG" />
+        </div>
+        <div id="user">
+            <span id="navText">Create Account. <button data-target="#signUp" data-toggle="modal">It's Free! </button>
+                <i class="fa-solid fa-caret-down"></i></span>
+        </div>
+
+        <div class="modal" id="signUp">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-green">
+                    <div class="modal-header d-flex justify-content-center"
+                        style="background-color: #effff4; width: 100%; height: 50px; color: #008A45; font-size: 14px; font-style: normal; font-weight: 500; text-align: center;">
+                        <div class="headLine">
+                            <p class="text-center">Let's learn, share & inspire each other with our passion for computer
+                                engineering. Sign
+                                up now 🤘🏼</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-body d-flex" style="width: 100%; margin: 0;">
+                        <div class="left">
+                            <div class="title">
+                                <h2 class="pb-5">Create Account</h2>
+                            </div>
+                            <form action="" class="d-flex flex-column gap-0" id="form">
+                                <div class="name d-flex justify-content-between">
+                                    <input type="text" style="width: 50%; height: 46px;" placeholder="First Name"
+                                        class="p-2">
+                                    <input type="text" style="width: 50%; height: 46px;" placeholder="Last Name"
+                                        class="p-2">
+                                </div>
+                                <input type="text" placeholder="Email" class="p-2">
+                                <input type="text" placeholder="Password" class="p-2">
+                                <input type="text" placeholder="Confirm password" class="p-2">
+                            </form>
+                            <button>Create Account</button>
+
+                            <button id="fbLog" class="d-flex align-items-center justify-content-center">
+                                <img src="assets/fb.svg" alt="" class="px-2">
+                                <span>Sign up with Facebook</span>
+                            </button>
+
+                            <button id="gmailLog" class="d-flex align-items-center justify-content-center">
+                                <img src="assets/gmail.svg" alt="" class="px-2">
+                                <span>Sign up with Google</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="right d-flex flex-column">
+                            <span class="text-right pb-2 notice fs-2">
+                                Already have an account? <a href="#" id="loginPage">Sign In</a></span>
+                            <img src="assets/illustration.svg" alt="" class="py-2">
+                            <span class=" text-center caution">
+                                By signing up, you agree to our Terms & conditions, Privacy policy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Another Modal -->
+        <div class="modal" id="anotherModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-green">
+                    <div class="modal-header d-flex justify-content-center"
+                        style="background-color: #effff4; width: 100%; height: 50px; color: #008A45; font-size: 14px; font-style: normal; font-weight: 500; text-align: center;">
+                        <div class="headLine">
+                            <p class="text-center">Let's learn, share & inspire each other with our passion for computer
+                                engineering. Sign
+                                up now 🤘🏼</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-body d-flex" style="width: 100%; margin: 0;">
+                        <div class="left">
+                            <div class="title">
+                                <h2 class="pb-5">Sign In</h2>
+                            </div>
+                            <form action="" class="d-flex flex-column gap-0" id="form">
+                                
+                                <input type="text" placeholder="Email" class="p-2" id="userName">
+                                <input type="text" placeholder="password" class="p-2">
+                            </form>
+                            <button id="signInBtn">Sign In</button>
+
+                            <button id="fbLog" class="d-flex align-items-center justify-content-center">
+                                <img src="assets/fb.svg" alt="" class="px-2">
+                                <span>Sign in with Facebook</span>
+                            </button>
+
+                            <button id="gmailLog" class="d-flex align-items-center justify-content-center">
+                                <img src="assets/gmail.svg" alt="" class="px-2">
+                                <span>Sign in with Google</span>
+                            </button>
+
+                            <div class="fpass d-flex justify-content-center" width="100%">
+                            <span class="text-center fs-2">Forget Password</span>
+                        </div>
+                        </div>
+
+
+
+                        <div class="right d-flex flex-column">
+                            <span class="text-right pb-2 notice fs-2">
+                                Don’t have an account yet?  <a href="#" id="signUpLink">Create new for free!</a></span>
+                            <img src="assets/illustration.svg" alt="" class="py-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </nav>
+
+    <main>
+        <div class="mainImg position-relative">
+            <h1 class="title position-absolute">Computer Engineering</h1>
+            <h6 class="subtitle position-absolute">
+                142,765 Computer Engineers follow this
+            </h6>
+            <div class="overlay"></div>
+            <img src="assets/main.svg" alt="" class="imageLayer" />
+        </div>
+    </main>
+
+    <hr class="line1" />
+
+    <div class="sortBar d-flex">
+        <div class="sorter">
+            <ul class="sorterMenus d-flex">
+                <li>All Posts (32)</li>
+                <li>Article</li>
+                <li>Event</li>
+                <li>Education</li>
+                <li>Job</li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button>Write a post <i class="fa-solid fa-caret-down"></i></button>
+            <button><i class="fa-solid fa-user-group"></i> Join Group</button>
+        </div>
+    </div>
+
+    <hr class="line2" />
+
+    <div class="mainContainer">
+        <div class="postContainer">
+            <div class="post1" id="card">
+                <div class="img">
+                    <img src="assets/post1.svg" alt="" id="postImg" />
+                </div>
+                <div class="info">
+                    <h4 class="cat" id="cat">🔬️ Education</h4>
+                    <div class="titlebox">
+                        <h3 class="title" id="title">
+                            Tax Benefits for Investment under National Pension Scheme
+                            launched by Government
+                        </h3>
+                        <i class="fa-solid fa-ellipsis threeDot"></i> </i>
+                    </div>
+                    <p class="desc" id="desc">
+                        I’ve worked in UX for the better part of a decade. From now on, I
+                        plan to rei…
+                    </p>
+                    <div class="authorPanel d-flex">
+                        <div class="authInfo d-flex">
+                            <div class="authImg" id="authImg">
+                                <img src="assets/auth1.svg" alt="" />
+                            </div>
+                            <div class="authName d-flex" id="authName">
+                                <span>Sarah West</span>
+                            </div>
+                        </div>
+
+                        <div class="postInfo d-flex">
+                            <div class="views d-flex">
+                                <img src="assets/eye.svg" alt="" />
+                                <span id="views">1.4k Views</span>
+                            </div>
+                            <div class="share d-flex">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="post2"></div>
+
+            <div id="post3">
+                <div class="img">
+                    <img src="assets/post3.svg" alt="" />
+                </div>
+                <div class="info">
+                    <h4 class="cat" id="cat">🗓️ Meetup</h4>
+                    <div class="titlebox  position-relative">
+                        <h3 class="title" id="title">
+                            Finance & Investment Elite Social Mixer @Lujiazui
+                        </h3>
+                        <i class="fa-solid fa-ellipsis threeDot"></i></i>
+                        <div class="threeDotEvent position-absolute" id="threeDotEvent">
+                            <ul class="threeDotMenus">
+                                <li>Edit</li>
+                                <li>Report</li>
+                                <li>Option 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="date-loc d-flex align-items-center">
+                        <div class="date d-flex align-items-center pr-5">
+                            <img src="assets/calender.svg" alt="" class="pr-2" />
+                            <span>Fri, 12 Oct, 2018</span>
+                        </div>
+                        <div class="loc d-flex align-items-center">
+                            <img src="assets/location.svg" alt="" class="pr-2" />
+                            <span>Ahmedabad, India</span>
+                        </div>
+                    </div>
+                    <button>Visit Website</button>
+                    <div class="authorPanel d-flex">
+                        <div class="authInfo d-flex">
+                            <div class="authImg" id="authImg">
+                                <img src="assets/auth3.svg" alt="" />
+                            </div>
+                            <div class="authName d-flex" id="authName">
+                                <span>Ronal Jones</span>
+                            </div>
+                        </div>
+
+                        <div class="postInfo d-flex">
+                            <div class="views d-flex">
+                                <img src="assets/eye.svg" alt="" />
+                                <span id="views">1.4k Views</span>
+                            </div>
+                            <div class="share d-flex">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="post4">
+                <div class="info">
+                    <h4 class="cat" id="cat">💼️ Job</h4>
+                    <div class="titlebox">
+                        <h3 class="title" id="title">
+                            Software Developer
+                        </h3>
+                        <i class="fa-solid fa-ellipsis threeDot"></i>
+                    </div>
+                    <div class="date-loc d-flex align-items-center">
+                        <div class="date d-flex align-items-center pr-5">
+                            <img src="assets/briefcase.svg" alt="" class="pr-2" />
+                            <span>Innovaccer Analytics Private Ltd.</span>
+                        </div>
+                        <div class="loc d-flex align-items-center">
+                            <img src="assets/location.svg" alt="" class="pr-2" />
+                            <span>Noida, India</span>
+                        </div>
+                    </div>
+                    <button>Visit Website</button>
+                    <div class="authorPanel d-flex">
+                        <div class="authInfo d-flex">
+                            <div class="authImg" id="authImg">
+                                <img src="assets/auth4.svg" alt="" />
+                            </div>
+                            <div class="authName d-flex" id="authName">
+                                <span>Ronal Jones</span>
+                            </div>
+                        </div>
+
+                        <div class="postInfo d-flex">
+                            <div class="views d-flex">
+                                <img src="assets/eye.svg" alt="" />
+                                <span id="views">1.4k Views</span>
+                            </div>
+                            <div class="share d-flex">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="sideBar">
+            <div class="location d-flex justify-content-between align-items-center">
+                <div class="place d-flex align-items-center">
+                    <img src="assets/location.svg" alt="" />
+                    <span>Dhaka, Bangladesh</span>
+                </div>
+                <dev class="placeEdit d-flex align-items-center">
+                    <img src="assets/edit.svg" alt="" />
+                </dev>
+            </div>
+
+            <hr class="line3" />
+
+            <div class="msg d-flex">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>Your location will help us serve better and extend a personalised
+                    experience.</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
